@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: JinTao/1998/0728
+    url: jdbc:mysql://amcjt.com/sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+server:
+    servlet:
+      context-path: /sell
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+#  path: /var/log/tomcat
+
+wechat:
+  mpAppId: wx614a4968b0f04dd4
+  mpAppSecret: 622725cf17338f65dafe51b4dbb9f7f2
+  openAppId: wx614a4968b0f04dd4
+  openAppSecret: 622725cf17338f65dafe51b4dbb9f7f2
