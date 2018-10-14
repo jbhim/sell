@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * @author jbhim
- * @date 2018/5/6/006.
+ * @date 2018/6/19/006.
  */
 @RestController
 @RequestMapping("/weixin")

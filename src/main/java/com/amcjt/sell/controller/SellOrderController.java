@@ -8,6 +8,7 @@ import org.hibernate.type.PostgresUUIDType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +20,7 @@ import java.util.Map;
 /**
  * 卖家端订单
  * @author jbhim
- * @date 2018/5/7/007.
+ * @date 2018/6/7/007.
  */
 @Controller
 @Slf4j
@@ -39,7 +40,7 @@ public class SellOrderController {
     public ModelAndView list(@RequestParam(value = "page", defaultValue = "1") Integer page,
                              @RequestParam(value = "size", defaultValue = "10") Integer size,
                              Map<String, Object> map) {
-        PageRequest pageRequest = PageRequest.of(page - 1, size);
+        PageRequest pageRequest = PageRequest.of(page - 1, size, new Sort(Sort.Direction.DESC,"createTime"));
         Page<OrderDTO> orderDTOPage = orderService.findList(pageRequest);
         map.put("orderDTOPage", orderDTOPage);
         map.put("currentPage", page);

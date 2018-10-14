@@ -6,7 +6,7 @@ import com.lly835.bestpay.service.impl.BestPayServiceImpl;
 
 /**
  * @author jbhim
- * @date 2018/5/7/007.
+ * @date 2018/6/7/007.
  */
 public class PayServiceImpl implements PayService {
     @Override

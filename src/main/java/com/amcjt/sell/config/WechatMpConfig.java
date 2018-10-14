@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author jbhim
- * @date 2018/5/6/006.
+ * @date 2018/6/19/006.
  */
 @Component
 public class WechatMpConfig {

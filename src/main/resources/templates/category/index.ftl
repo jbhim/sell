@@ -1,14 +1,10 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>卖家后台管理</title>
-        <link href="https://cdn.bootcss.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
-    </head>
+<#include "../common/header.ftl">
 <body>
-    <#include "../common/hand.ftl">
-    <br>
-    <hr>
-    <div class="container">
+<div id="wrapper" class="toggled">
+<#include "../common/nav.ftl">
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
         <div class="row clearfix">
             <div class="col-md-12 column">
                 <form role="form" method="post" action="/sell/seller/category/save">
@@ -32,6 +28,7 @@
             </div>
         </div>
     </div>
+</div>
 
 </body>
 </html>

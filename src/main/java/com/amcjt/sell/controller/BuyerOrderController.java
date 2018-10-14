@@ -20,12 +20,14 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
  * @author jbhim
- * @date 2018/5/5/005.
+ * @date 2018/6/6/005.
  */
+@CrossOrigin
 @RestController
 @RequestMapping("/buyer/order")
 @Slf4j
@@ -71,7 +73,8 @@ public class BuyerOrderController {
             throw new SellException(ResultEnum.PARAM_ERROR);
         }
         Page<OrderDTO> orderDTOPage = orderService.findList(openid, PageRequest.of(page, size));
-        return ResultVOUtil.success(orderDTOPage.getContent());
+        List<OrderDTO> content = orderDTOPage.getContent();
+        return ResultVOUtil.success(content);
     }
 
     /**

@@ -4,7 +4,7 @@ import lombok.Getter;
 
 /**
  * @author jbhim
- * @date 2018/5/4/004.
+ * @date 2018/6/14/004.
  */
 @Getter
 public enum ResultEnum {

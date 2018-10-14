@@ -12,33 +12,45 @@ import java.util.List;
  */
 public interface ProductService {
     ProductInfo findOne(String productId);
+
     /**
      * 查询所有在架商品
+     *
      * @return
      */
 
     List<ProductInfo> findUpAll();
+
     Page<ProductInfo> findAll(Pageable pageable);
+
     ProductInfo save(ProductInfo productInfo);
 
 
-    /**加库存
+    /**
+     * 加库存
+     *
      * @param cartDTOS
      */
     void increaseStock(List<CartDTO> cartDTOS);
 
-    /**减库存
+    /**
+     * 减库存
+     *
      * @param cartDTOS
      */
-    void  decreaseStock(List<CartDTO> cartDTOS);
+    void decreaseStock(List<CartDTO> cartDTOS);
 
-    /**在架
+    /**
+     * 在架
+     *
      * @param productId
      * @return
      */
     ProductInfo onSale(String productId);
 
-    /**上架
+    /**
+     * 上架
+     *
      * @param productId
      * @return
      */

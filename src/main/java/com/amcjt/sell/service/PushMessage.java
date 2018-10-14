@@ -5,7 +5,7 @@ import com.amcjt.sell.dto.OrderDTO;
 /**
  * 推送消息
  * @author jbhim
- * @date 2018/5/12/012.
+ * @date 2018/6/12/012.
  */
 public interface PushMessage {
     /**

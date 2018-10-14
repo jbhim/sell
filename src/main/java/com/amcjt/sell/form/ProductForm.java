@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 
 /**
  * @author jbhim
- * @date 2018/5/10/010.
+ * @date 2018/6/10/010.
  */
 @Data
 public class ProductForm {

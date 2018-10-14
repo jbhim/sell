@@ -1,14 +1,10 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>卖家后台管理</title>
-        <link href="https://cdn.bootcss.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
-    </head>
+<#include "../common/header.ftl">
 <body>
-    <#include "../common/hand.ftl">
-    <br>
-    <hr>
-    <div class="container">
+<div id="wrapper" class="toggled">
+<#include "../common/nav.ftl">
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
         <div class="row clearfix">
             <div class="col-md-12 column">
                 <form role="form" method="post" action="/sell/seller/product/save">
@@ -34,7 +30,7 @@
 
                     <div class="form-group">
                         <label>图片</label>
-                        <img height="100" width="100" src="${(productInfo.productIcon)!''}" alt=""/>
+                        <img id="imgflag" height="100" width="100" src="${(productInfo.productIcon)!''}" alt="${(productInfo.productIcon)!'1'}"/>
                         <input name="productIcon" type="text" class="form-control" value="${(productInfo.productIcon)!''}"/>
                     </div>
 
@@ -60,7 +56,19 @@
             </div>
         </div>
     </div>
-
+</div>
+<div
 </body>
+<script>
+    (function(){
+        var imgflag = document.getElementById('imgflag');
+        console.log(imgflag.alt);
+        if (imgflag.alt === '1'){
+            console.log(imgflag.alt);
+            imgflag.style.display = 'none';
+        }
+    })();
+
+</script>
 </html>
 

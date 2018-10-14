@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  * @author jbhim
- * @date 2018/5/11/011.
+ * @date 2018/6/11/011.
  */
 public interface SellerInfoRepository extends JpaRepository<SellerInfo, String>{
     /**通过openid查询

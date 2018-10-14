@@ -6,7 +6,7 @@ import javax.validation.constraints.NotEmpty;
 
 /**
  * @author jbhim
- * @date 2018/5/5/005.
+ * @date 2018/6/6/005.
  */
 @Data
 public class OrderFrom {
